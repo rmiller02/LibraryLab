@@ -1,5 +1,5 @@
 //class properties
-public class Book extends LibraryItem {
+public class Book extends LibraryItem implements Reservable, Loanable {
     private int retailPrice;
     private int releaseDate;
     private String bookLocation;
@@ -50,8 +50,26 @@ public void setStocked(String stocked) {
 }
 
 @Override
-public String toString(){
-    return this.getreleaseDate() + " " + this.getstocked() + " " + this.getbookLocation() + " " + this.getretailPrice()
+    public boolean isReservable() {
+        return true;
     }
+
+    @Override
+    public int getReservationTime() {
+        return 7;
+    }
+
+    @Override
+    public boolean isLoanable() {
+        return true;
+    }
+
+
+
+
+
+
+
+
 
 }

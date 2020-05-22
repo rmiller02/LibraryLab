@@ -1,7 +1,8 @@
 public class Magazine extends Periodical {
     String Topic, Articles;
 
-    public Magazine(String topic, String articles) {
+    public Magazine(String topic, String articles, String genre, String author, int pages, Boolean audio) {
+        super(genre, author, pages, audio);
         Topic = topic;
         Articles = articles;
     }
